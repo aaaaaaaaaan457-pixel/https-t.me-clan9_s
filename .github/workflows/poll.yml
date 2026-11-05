@@ -1,0 +1,25 @@
+name: Tasdiqlashni tekshirish
+
+on:
+  schedule:
+    - cron: "*/5 4-12 * * *"   # 09:00-17:55 Toshkent, har 5 daqiqada
+  workflow_dispatch:
+
+concurrency:
+  group: poll
+
+jobs:
+  poll:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install requests
+      - run: python src/poll.py
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          ADMIN_CHAT_ID: ${{ secrets.ADMIN_CHAT_ID }}
+          CHANNEL_ID: ${{ secrets.CHANNEL_ID }}
