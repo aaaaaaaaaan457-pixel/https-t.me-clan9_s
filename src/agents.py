@@ -10,7 +10,7 @@ from google.genai import types
 
 from config import ELEVENLABS_MODEL, GEMINI_IMAGE_MODEL, RUBRIC, get
 
-TEXT_MODEL = os.getenv("GEMINI_TEXT_MODEL", "gemini-flash-latest")
+TEXT_MODEL = os.getenv("GEMINI_TEXT_MODEL", "gemini-flash-latest").                                                                TEXT_MODEL = "gemini-2.5-flash"    
 
 _client = None
 
