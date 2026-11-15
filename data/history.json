@@ -3,5 +3,6 @@
   "Xatolarni tahlil qilish (Debugging) va Claude'dan yordam so'rash",
   "CLAUDE.md fayli yordamida loyiha qoidalarini berish",
   "Kod yozdirishdan oldin reja so'rash",
-  "\"Avval menga savol ber\" usuli"
+  "\"Avval menga savol ber\" usuli",
+  "API kalitlarni xavfsiz saqlash (.env faylidan foydalanish)"
 ]
